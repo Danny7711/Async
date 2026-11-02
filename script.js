@@ -33,3 +33,18 @@ function fetchData() {
 fetchData().then((result) => {
     console.log(result);
 });
+
+// 5 задание    
+
+function fetchDataWithError() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Ошибка загрузки!");
+        }, 2000);
+    });
+}
+
+fetchDataWithError()
+    .catch((error) => {
+        console.log(error);
+    });
