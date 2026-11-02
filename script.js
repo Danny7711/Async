@@ -66,3 +66,23 @@ async function fetchDataAsync() {
 fetchDataAsync().then((result) => {
     console.log(result);
 });
+// 7 задание
+
+function fetchDataWithError() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Ошибка загрузки!");
+        }, 2000);
+    });
+}
+
+async function fetchDataWithErrorAsync() {
+    try {
+        const result = await fetchDataWithError();
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+fetchDataWithErrorAsync();
