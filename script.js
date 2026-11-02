@@ -1,8 +1,9 @@
+//1 задание
 setTimeout(() => {
     console.log("Привет, мир!");
 }, 2000);
 
-//2
+//2 и 3 задание
 
 let count = 0;
 
@@ -19,3 +20,16 @@ const interval = setInterval(() => {
     }
 }, 1000);
 
+// 4 задание 
+function fetchData() {
+    return new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("Данные получены");
+
+    },3000);
+
+    });
+}
+fetchData().then((result) => {
+    console.log(result);
+});
