@@ -113,3 +113,30 @@ async function runTasks() {
 }
 
 runTasks();
+
+//` 9 задание
+
+function taskA() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Задача A выполнена!");
+        }, 2000);
+    });
+}
+
+function taskB() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Задача B выполнена!");
+        }, 3000);
+    });
+}
+
+async function runTasks() {
+    const results = await Promise.all([taskA(), taskB()]);
+
+    console.log(results[0]);
+    console.log(results[1]);
+}
+
+runTasks();
