@@ -48,3 +48,21 @@ fetchDataWithError()
     .catch((error) => {
         console.log(error);
     });
+// 6 задание
+
+function fetchData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Данные получены!");
+        }, 3000);
+    });
+}
+
+async function fetchDataAsync() {
+    const result = await fetchData();
+    return result;
+}
+
+fetchDataAsync().then((result) => {
+    console.log(result);
+});
