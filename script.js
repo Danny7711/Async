@@ -140,3 +140,14 @@ async function runTasks() {
 }
 
 runTasks();
+// 10 задание
+
+async function delayedMessage(message, delay) {
+    await new Promise((resolve) => {
+        setTimeout(resolve, delay);
+    });
+
+    console.log(message);
+}
+
+delayedMessage("Привет, мир!", 2000);
